@@ -1,0 +1,21 @@
+.about-section {
+    min-height: 100vh;
+}
+
+.about {
+    background: var(--second-color);
+}
+
+.box-about img {
+    --size: 200px;
+    object-fit: cover;
+    border: 3px solid var(--main-color);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+}
