@@ -1,257 +1,338 @@
 export const ProjectData = [
     {
-        id: crypto.randomUUID(),
-        img: require("../IMG/project/e-commerce.png"), // تأكد من مسار الصورة
-        name: "Jivara E-commerce ",
+        id: "jivara-ecommerce",
+        img: require("../IMG/project/e-commerce.png"),
+        name: "Jivara E-commerce",
+        category: "fullstack",
         type: "react",
-        link: "https://e-commerce-9c449.web.app", // ضع رابط المشروع
-        contact: "A full-featured e-commerce store with product browsing, a shopping cart, and a responsive design.",
-        fullDescription: "This e-commerce store is built with React and features functionalities like product browsing, a shopping cart, and a secure checkout system. The platform supports advanced role-based management for admins and product managers, allowing them to efficiently manage products and categories. Users can browse products, leave reviews, and save items for later. The site is fully responsive, offering a clean, modern design optimized for all devices. Additionally, it leverages a powerful backend built with Express.js and MySQL, ensuring seamless performance and scalability. Images are handled via Cloudinary for fast and reliable uploads, while Firebase provides hosting for a secure and efficient deployment. This e-commerce store delivers an exceptional shopping experience with an intuitive interface and robust features."
-        ,
-        respnseve: true
+        technologies: ['React', 'Express.js', 'MySQL', 'Firebase', 'Cloudinary'],
+        link: "https://e-commerce-9c449.web.app",
+        github: "https://github.com/mahmoodaqaad/E-commerce-jivara",
+        featured: true,
+        contact: "A complete online shopping platform with admin dashboard and secure checkout.",
+        fullDescription: "Jivara is a full-featured e-commerce platform where users can browse products, add items to cart, and complete purchases. The platform includes advanced admin features for managing products, categories, and orders. Built with React for the frontend and Express.js with MySQL for the backend, it delivers a seamless shopping experience.",
+        features: ['Product browsing & search', 'Shopping cart system', 'Admin dashboard', 'Order management'],
+        responsive: true
     },
-
     {
-
-        id: crypto.randomUUID(),
+        id: "snober-chat",
         img: require("../IMG/project/snoper-chat.png"),
-        name: "SNOBER CHAT",
+        name: "SNBER Chat",
+        category: "fullstack",
         type: "react",
-        link: "https://snoper-chat-66f10.web.app/", // قم بإضافة الرابط إذا كان متوفراً
-        title: "Real-Time Chat Application",
-        contact: "A social media platform with real-time messaging, friend requests, posts, likes, and comments.",
-        fullDescription: "This social media platform, built using React, Express, MySQL, and Bootstrap, allows users to send and receive friend requests, add friends, create posts, like and comment on posts. It features real-time messaging, an active friends section with a green dot indicator, and a clean, user-friendly design optimized for all devices."
-
-        , respnseve: true
-
-    }, {
-        id: crypto.randomUUID(),
+        technologies: ['React', 'Express.js', 'MySQL', 'Bootstrap', 'WebSocket'],
+        link: "https://snoper-chat-66f10.web.app/",
+        github: "https://github.com/mahmoodaqaad/Snoper_chat",
+        featured: true,
+        contact: "A social media platform with real-time messaging and interactive features.",
+        fullDescription: "snber Chat is a comprehensive social media platform featuring instant messaging, friend request management, and post creation with likes and comments. Built with React, Express.js, and MySQL, it provides a smooth, real-time experience.",
+        features: ['Real-time messaging', 'Friend requests', 'Posts & comments', 'Active status indicator'],
+        responsive: true
+    },
+    {
+        id: "cryptocoin",
         img: require("../IMG/project/CryptoCoin-1.0.0.png"),
         name: "CryptoCoin",
-        type: "react",
+        category: "react",
+        type: "React",
+        technologies: ["React", "CSS", "Bootstrap"],
         link: "https://cryptocoin-7e4df.web.app/",
-        contact: "A cryptocurrency price tracker built with React, providing real-time price updates and trend analysis for various coins.",
-        fullDescription: "Built with React and React Hooks, this responsive application offers real-time cryptocurrency price updates and trend analysis. Its modern design ensures optimal performance across all devices."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/CryptoCoin",
+        featured: true,
+        contact: "A modern landing page presenting cryptocurrency statistics and roadmap visually.",
+        fullDescription: "CryptoCoin is a clean and responsive landing page built with React, CSS, and Bootstrap. It displays cryptocurrency statistics, key numbers, roadmap, and FAQ sections in a visually appealing layout without backend tracking or live API data.",
+        features: [
+            "Crypto statistics and key numbers",
+            "Roadmap section",
+            "FAQ section",
+            "Responsive and modern layout"
+        ],
+        responsive: true
     },
+
     {
-        id: crypto.randomUUID(),
+        id: "applight",
         img: require("../IMG/project/Applight.png"),
         name: "Applight",
+        category: "html",
         type: "html",
+        technologies: ['HTML', 'CSS', 'JavaScript'],
         link: "https://mahmoodaqaad.github.io/App-Light/",
-        contact: "A sleek, responsive landing page design for a mobile app, emphasizing clean aesthetics and ease of navigation.",
-        fullDescription: "Developed using HTML, CSS, and JavaScript, this landing page features a modern design with a focus on user experience. It is fully responsive and adapts to all screen sizes."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/App-Light",
+        featured: false,
+        contact: "A sleek, responsive landing page for mobile applications.",
+        fullDescription: "A modern HTML/CSS landing page designed to effectively showcase mobile app features and benefits with a clean, light aesthetic.",
+        features: ['App feature showcase', 'Pricing tables', 'Responsive layout'],
+        responsive: true
     },
     {
-        id: crypto.randomUUID(),
+        id: "datadive",
         img: require("../IMG/project/DataDive.png"),
         name: "DataDive",
+        category: "html",
         type: "html",
+        technologies: ['HTML', 'CSS', 'JavaScript'],
         link: "https://mahmoodaqaad.github.io/DataDive/",
-        contact: "A data-driven dashboard template focused on analytics and insights, built with HTML and CSS.",
-        fullDescription: "This dashboard template is crafted with HTML, CSS, and JavaScript, designed for analytics and insights. It offers a clean layout that is responsive and user-friendly."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/DataDive",
+        featured: false,
+        contact: "Analytics dashboard template with data-focused layout.",
+        fullDescription: "A clean and organized dashboard template focusing on data visualization placeholders and analytical UI components.",
+        features: ['Data grid', 'Chart placeholders', 'Sidebar navigation'],
+        responsive: true
     },
     {
-        id: crypto.randomUUID(),
+        id: "bondi",
         img: require("../IMG/project/Bondi.png"),
         name: "Bondi",
+        category: "html",
         type: "html",
+        technologies: ['HTML', 'CSS', 'Bootstrap'],
         link: "https://mahmoodaqaad.github.io/Bondi/",
-        contact: "A modern and responsive website layout for a Bondi-themed project, with engaging visuals and well-structured content.",
-        fullDescription: "Using HTML, CSS, and JavaScript, this website layout features engaging visuals and a modern design. It is responsive, providing an optimal viewing experience across various devices."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/bondi",
+        featured: false,
+        contact: "Modern agency template with engaging visuals.",
+        fullDescription: "A vibrant and modern agency landing page built with Bootstrap, focusing on clean typography and creative layout.",
+        features: ['Portfolio filter', 'Team section', 'Service highlights'],
+        responsive: true
     },
     {
-        id: crypto.randomUUID(),
+        id: "feane",
         img: require("../IMG/project/feane.png"),
         name: "Feane",
+        category: "html",
         type: "html",
+        technologies: ['HTML', 'CSS', 'JavaScript'],
         link: "https://mahmoodaqaad.github.io/Feane/",
-        contact: "A creative and stylish HTML template with animations and smooth transitions, suitable for a variety of projects.",
-        fullDescription: "Crafted with HTML, CSS, and JavaScript, this template showcases creative animations and smooth transitions. It is fully responsive, ensuring compatibility with all devices."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/Feane",
+        featured: false,
+        contact: "Creative HTML template with smooth transitions.",
+        fullDescription: "A creative and stylish template showcasing smooth transitions and modern design elements, suitable for various project types.",
+        features: ['Smooth scrolling', 'Project gallery', 'Contact section'],
+        responsive: true
     },
     {
-        id: crypto.randomUUID(),
+        id: "basic-blog",
         img: require("../IMG/project/tem3.png"),
         name: "Basic Blog",
+        category: "html",
         type: "html",
+        technologies: ['HTML', 'CSS', 'JavaScript'],
         link: "https://mahmoodaqaad.github.io/template3/",
-        contact: "A simple blog template that offers a clean layout for blog posts, featured images, and author bios.",
-        fullDescription: "This simple blog template is built with HTML, CSS, and JavaScript, providing a clean and organized layout. It is responsive, making it accessible on any device."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/template3",
+        featured: false,
+        contact: "A simple and clean blog template layout.",
+        fullDescription: "A minimalist blog template featuring an organized layout for posts, categories, and author highlights.",
+        features: ['Clean layout', 'Responsive design', 'Post previews'],
+        responsive: true
     },
     {
-        id: crypto.randomUUID(),
+        id: "calculator",
         img: require("../IMG/project/Calculater.png"),
         name: "Calculator",
+        category: "html",
         type: "html",
+        technologies: ['HTML', 'CSS', 'JavaScript'],
         link: "https://mahmoodaqaad.github.io/Calculater/",
-        contact: "A functional web-based calculator app built using HTML and JavaScript, supporting basic arithmetic operations.",
-        fullDescription: "Developed using HTML, CSS, and JavaScript, this web-based calculator offers basic arithmetic functions. It features a responsive design for use on various screen sizes."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/Calculater",
+        featured: false,
+        contact: "Functional web-based calculator application.",
+        fullDescription: "A fully functional calculator built with plain JavaScript, featuring basic arithmetic operations and a responsive UI.",
+        features: ['Basic arithmetic', 'Clean UI'],
+        responsive: false
     },
     {
-        id: crypto.randomUUID(),
+        id: "basic-dashboard",
         img: require("../IMG/project/basic dashboard.png"),
         name: "Basic Dashboard",
+        category: "html",
         type: "html",
+        technologies: ['HTML', 'CSS', 'JavaScript'],
         link: "https://mahmoodaqaad.github.io/basic-dashboard/",
-        contact: "A basic HTML and CSS dashboard prototype, showcasing different sections for monitoring and managing data.",
-        fullDescription: "This dashboard prototype is created with HTML, CSS, and JavaScript, designed for data monitoring and management. It is fully responsive, ensuring usability across devices."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/basic-dashboard",
+        featured: false,
+        contact: "Prototype dashboard with essential monitoring sections.",
+        fullDescription: "A dashboard layout prototype built with HTML/CSS, showcasing data monitoring sections and navigational elements.",
+        features: ['Sidebar navigation', 'Data overview', 'Responsive panels'],
+        responsive: true
     },
     {
-        id: crypto.randomUUID(),
+        id: "age-calculator",
         img: require("../IMG/project/Age Calculater.png"),
-        name: "Age Calculater",
+        name: "Age Calculator",
+        category: "html",
         type: "html",
+        technologies: ['HTML', 'CSS', 'JavaScript'],
         link: "https://mahmoodaqaad.github.io/Age-Calculater/",
-        contact: "A simple, user-friendly age calculator web app that allows users to calculate their age accurately based on input dates.",
-        fullDescription: "Built with HTML, CSS, and JavaScript, this age calculator offers an intuitive interface for users. The responsive design ensures accessibility on all devices."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/Age-Calculater",
+        featured: false,
+        contact: "User-friendly app to calculate age accurately.",
+        fullDescription: "A simple utility app that calculates your exact age based on input date, featuring an intuitive and responsive interface.",
+        features: ['Date picker', 'Precise calculation', 'Clean feedback'],
+        responsive: true
     },
     {
-        id: crypto.randomUUID(),
+        id: "digital-agency",
         img: require("../IMG/project/digital-agency-html-template.png"),
         name: "Digital Agency",
+        category: "react",
         type: "react",
+        technologies: ['React', 'Bootstrap', 'Framer Motion'],
         link: "https://digital-agency-mahmodaqaad.netlify.app/",
-        contact: "A modern React-based website for a digital agency, featuring sections for services, portfolio, and contact.",
-        fullDescription: "This website is built with React and React Hooks, featuring a modern design that includes service sections and a portfolio. It is responsive, ensuring a seamless experience across devices."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/Digital-Agency",
+        featured: true,
+        contact: "A modern React-based website for a digital agency.",
+        fullDescription: "A professional landing page for a digital agency, showcasing services, portfolio, and team members. Built with React for performance and modularity.",
+        features: ['Service sections', 'Portfolio grid', 'Testimonials', 'Contact form'],
+        responsive: true
     },
     {
-        id: crypto.randomUUID(),
+        id: "hostit",
         img: require("../IMG/project/hostit-html.png"),
         name: "Hostit",
+        category: "html",
         type: "html",
+        technologies: ['HTML', 'CSS', 'Bootstrap'],
         link: "https://mahmoodaqaad.github.io/hostit-html/",
-        contact: "A hosting service website template that highlights services, plans, and client testimonials in a professional layout.",
-        fullDescription: "Developed using HTML, CSS, and JavaScript, this hosting service template features a professional layout showcasing services and testimonials. It is fully responsive for all screen sizes."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/hostit-html",
+        featured: false,
+        contact: "Professional hosting service website template.",
+        fullDescription: "A comprehensive hosting service layout featuring pricing plans, service details, and client testimonials.",
+        features: ['Pricing tables', 'Service highlights', 'Clean professional look'],
+        responsive: true
     },
     {
-        id: crypto.randomUUID(),
+        id: "admin-dashboard",
         img: require("../IMG/project/Dashboard.png"),
-        name: "Dashboard",
+        name: "Admin Dashboard",
+        category: "react",
         type: "react",
+        technologies: ['React', 'Charts.js', 'Bootstrap'],
         link: "https://admin-dashboard-5add1.web.app/",
-        contact: "A feature-rich admin dashboard built with React, showcasing data visualization, user management, and responsive design.",
-        fullDescription: "This admin dashboard is built with React and React Hooks, featuring advanced data visualization and user management tools. It is responsive and designed for usability on all devices."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/Admin-Dashboard",
+        featured: true,
+        contact: "Feature-rich admin dashboard with data visualization.",
+        fullDescription: "A deep-dive admin interface built with React, featuring user management tools and advanced data visualization charts.",
+        features: ['User management', 'Interactive charts', 'Responsive layout'],
+        responsive: true
     },
     {
-        id: crypto.randomUUID(),
+        id: "basic-ecommerce",
         img: require("../IMG/project/Ecommerce.png"),
-        name: "Ecommerce",
+        name: "Basic Ecommerce",
+        category: "html",
         type: "html",
+        technologies: ['HTML', 'CSS', 'JavaScript'],
         link: "https://mahmoodaqaad.github.io/basic-Ecommerce/",
-        contact: "An e-commerce website template with a clean layout for showcasing products, categories, and a cart system.",
-        fullDescription: "Created using HTML, CSS, and JavaScript, this e-commerce template offers a clean layout for products and categories. It is fully responsive, providing a great shopping experience on any device."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/basic-Ecommerce",
+        featured: false,
+        contact: "Simple ecommerce template for product showcasing.",
+        fullDescription: "A foundational ecommerce layout focusing on product grids and navigation structure for online stores.",
+        features: ['Product grid', 'Category filters', 'Clean layout'],
+        responsive: true
     },
     {
-        id: crypto.randomUUID(),
+        id: "finder",
         img: require("../IMG/project/Finder.png"),
         name: "Finder",
+        category: "html",
         type: "html",
+        technologies: ['HTML', 'CSS', 'JavaScript'],
         link: "https://mahmoodaqaad.github.io/Finder/",
-        contact: "A search-focused website template, designed with minimalism and usability in mind for a seamless user experience.",
-        fullDescription: "Built with HTML, CSS, and JavaScript, this search-focused template features a minimalist design for ease of use. It is responsive, adapting to all screen sizes."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/Finder",
+        featured: false,
+        contact: "Search-oriented template with minimalist design.",
+        fullDescription: "A minimalist search-focused prototype designed for highly usable information retrieval interfaces.",
+        features: ['Simple UI', 'Search layout', 'Responsive design'],
+        responsive: true
     },
     {
-        id: crypto.randomUUID(),
+        id: "hangman-game",
         img: require("../IMG/project/HangMan game.png"),
         name: "HangMan Game",
+        category: "html",
         type: "html",
+        technologies: ['HTML', 'CSS', 'JavaScript'],
         link: "https://mahmoodaqaad.github.io/HangMan-game/",
-        contact: "An interactive web-based Hangman game using HTML, CSS, and JavaScript for word-guessing fun.",
-        fullDescription: "This interactive game is developed with HTML, CSS, and JavaScript, offering a fun word-guessing experience. The design is responsive, ensuring compatibility across all devices."
-
-        , respnseve: false
+        github: "https://github.com/mahmoodaqaad/HangMan-game",
+        featured: false,
+        contact: "Interactive word-guessing game built with JS.",
+        fullDescription: "A classic word-guessing game featuring interactive elements, state management, and a dedicated UI for gameplay.",
+        features: ['Game logic', 'Interactive UI', 'Dynamic feedback'],
+        responsive: false
     },
     {
-        id: crypto.randomUUID(),
+        id: "infoscope",
         img: require("../IMG/project/InfoScope.png"),
         name: "InfoScope",
+        category: "html",
         type: "html",
+        technologies: ['HTML', 'CSS', 'JavaScript'],
         link: "https://mahmoodaqaad.github.io/Info-Scope/",
-        contact: "An information-centric website template designed to present data-rich content in a structured format.",
-        fullDescription: "Created with HTML, CSS, and JavaScript, this template presents data-rich content in a structured format. It is fully responsive, providing a great user experience on various devices."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/Info-Scope",
+        featured: false,
+        contact: "Information-centric template for structured content.",
+        fullDescription: "A layout designed for content-heavy information sites, ensuring readability and clear content hierarchy.",
+        features: ['Structured layout', 'Content focused', 'Readable design'],
+        responsive: true
     },
     {
-        id: crypto.randomUUID(),
+        id: "lazyfox",
         img: require("../IMG/project/Lazyfox-master.png"),
         name: "Lazyfox Master",
+        category: "html",
         type: "html",
+        technologies: ['HTML', 'CSS', 'JavaScript'],
         link: "https://mahmoodaqaad.github.io/Lazyfox-master/",
-        contact: "A modern and creative website template for an agency or freelancer, featuring a sleek design and smooth scrolling.",
-        fullDescription: "Developed using HTML, CSS, and JavaScript, this template features a modern design with smooth scrolling. It is responsive, making it ideal for agencies and freelancers."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/Lazyfox-master",
+        featured: false,
+        contact: "Clean agency/freelancer portfolio template.",
+        fullDescription: "A modern portfolio layout with smooth transitions and a focus on creative professional showcases.",
+        features: ['Smooth scrolling', 'Gallery view', 'Modern aesthetic'],
+        responsive: true
     },
     {
-        id: crypto.randomUUID(),
+        id: "stop-watch",
         img: require("../IMG/project/Stop watch.png"),
         name: "Stop Watch",
+        category: "html",
         type: "html",
+        technologies: ['HTML', 'CSS', 'JavaScript'],
         link: "https://mahmoodaqaad.github.io/Stop-watch/",
-        contact: "A digital stopwatch app built with JavaScript, allowing users to start, stop, and reset a timer.",
-        fullDescription: "Constructed with HTML, CSS, and JavaScript, this stopwatch app provides basic timing functionalities, including start, stop, and reset. Its responsive design ensures a seamless experience on both mobile and desktop devices."
-
-        , respnseve: false
+        github: "https://github.com/mahmoodaqaad/Stop-watch",
+        featured: false,
+        contact: "Digital stopwatch app with start/stop/reset.",
+        fullDescription: "A utility application providing precise timing functionality with a simple and clean digital interface.",
+        features: ['Precision timing', 'Start/Stop/Reset', 'Clean interface'],
+        responsive: false
     },
     {
-        id: crypto.randomUUID(),
+        id: "todo-simple",
         img: require("../IMG/project/TODO.png"),
-        name: "TODO",
+        name: "Simple TODO",
+        category: "react",
         type: "react",
+        technologies: ['React', 'Hooks', 'State Management'],
         link: "https://todomahmoodaqaad.netlify.app/",
-        contact: "A to-do list application built with React, allowing users to add, delete, and mark tasks as complete.",
-        fullDescription: "Developed using React and React Hooks, this responsive to-do list application allows users to manage tasks efficiently with options to add, delete, and mark tasks as complete. The design is modern, functional, and adaptable to all screen sizes."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/Simple-TO-DO",
+        featured: false,
+        contact: "Task management app with add/delete features.",
+        fullDescription: "A React-based task manager highlighting effective state handling and interactive listing features.",
+        features: ['Task management', 'Interactive UI', 'Fast performance'],
+        responsive: true
     },
     {
-        id: crypto.randomUUID(),
+        id: "xo-game",
         img: require("../IMG/project/XO_Game.png"),
         name: "XO Game",
+        category: "html",
         type: "html",
+        technologies: ['HTML', 'CSS', 'JavaScript'],
         link: "https://mahmoodaqaad.github.io/xo-game/",
-        contact: "A classic Tic-Tac-Toe game built with HTML and JavaScript, featuring an interactive interface for two players.",
-        fullDescription: "Created with HTML, CSS, and JavaScript, this XO game provides a classic Tic-Tac-Toe experience with an interactive interface suitable for two players. The responsive design ensures compatibility across various devices, enhancing user interaction."
-
-        , respnseve: true
+        github: "https://github.com/mahmoodaqaad/xo-game",
+        featured: false,
+        contact: "Classic Tic-Tac-Toe game for two players.",
+        fullDescription: "An interactive two-player game featuring win detection logic and a clean, responsive game board interface.",
+        features: ['Two-player mode', 'Win detection', 'Interactive board'],
+        responsive: true
     }
 ];
-
-
-
-
-
-
-
-
-
-

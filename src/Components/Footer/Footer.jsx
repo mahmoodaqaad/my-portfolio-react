@@ -1,19 +1,28 @@
 import React from 'react'
 import './footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
+
 const Footer = () => {
+  const currentYear = new Date().getFullYear()
+
   return (
-    <div className='footer py-3 px-5 text-center text-sm-start'>
-      <div className="row justify-content-between">
-        <div className="col-12 col-sm-7 copyright">
-          CopyRight &copy; 2024 By <span className="main-color">Mahmood aqaad</span>
+    <footer className='footer py-5 border-top border-secondary'>
+      <div className='container'>
+        <div className='row align-items-center'>
+          <div className='col-md-6 text-center text-md-start'>
+            <p className='m-0 text-secondary'>
+              &copy; {currentYear} <span className='fw-bold text-primary'>Mahmood Al-Aqaad.</span> All rights reserved.
+            </p>
+          </div>
+          <div className='col-md-6 text-center text-md-end mt-3 mt-md-0'>
+            <p className='m-0 text-secondary'>
+              Built with Mahmood using React & CSS
+            </p>
+          </div>
         </div>
-        <div onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-center toUp btn btn-main mx-auto mx-sm-0 mt-1">
-        <FontAwesomeIcon icon={faArrowUp} />
       </div>
-    </div>
-    </div >
+    </footer>
   )
 }
 

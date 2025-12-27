@@ -1,20 +1,91 @@
-.inputGroup input,
-.inputGroup textarea {
-    width: 100%;
-    background-color: var(--second-color);
-    padding: 15px 15px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    font-size: 20px;
-    font-weight: 300;
-    color: var(--color);
+.contact-section {
+    padding: var(--spacing-3xl) 0;
+    min-height: 100vh;
 }
 
-.inputGroup textarea {
-    resize: none;
-    height: 200px;
+.contact-info {
+    padding: var(--spacing-xl) 0;
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    background: var(--background-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    transition: all var(--transition-base);
+}
+
+.social-link:hover {
+    background: var(--primary);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-5px);
+}
+
+.contact-form {
+    background: var(--background-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--radius-xl) !important;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    background: var(--background) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+    padding: 0.75rem 1rem !important;
+    border-radius: var(--radius-md) !important;
+    transition: all var(--transition-fast) !important;
+}
+
+.form-control:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1) !important;
+}
+
+.form-control::placeholder {
+    color: var(--text-muted) !important;
+}
+
+@media (max-width: 991px) {
+    .contact-info {
+        text-align: center;
+    }
+
+    .social-connect .d-flex {
+        justify-content: center;
+    }
+
+    .info-item {
+        justify-content: center;
+        text-align: left;
+    }
 }

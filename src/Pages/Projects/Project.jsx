@@ -1,95 +1,112 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './project.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight, faLink } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { Link, useNavigate } from 'react-router-dom'
 import { ProjectData } from '../../Data/Project'
-import { motion, AnimatePresence } from 'framer-motion'; // استيراد AnimatePresence وmotion
-import { Scroll } from '../../Components/Scroll'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const Project = () => {
-    const Navigate = useNavigate()
-    // متغير الحالة للنوع المحدد
-    const [selectedType, setSelectedType] = useState('all');
+    const navigate = useNavigate()
+    const [filter, setFilter] = useState('all')
+    const [showAll, setShowAll] = useState(false)
+    const categories = [
+        { id: 'all', label: 'All' },
+        { id: 'react', label: 'React' },
+        { id: 'fullstack', label: 'Full Stack' },
+        { id: 'html', label: 'HTML/CSS/JS' }
+    ]
 
-    // دالة فلترة المشاريع بناءً على النوع
     const filteredProjects = ProjectData.filter(project =>
-        selectedType === 'all' || project.type === selectedType
-    );
-
-    function handleFilter(e, type) {
-
-        setSelectedType(type)
-        e.target.parentElement.parentElement.querySelectorAll("div").forEach(e => {
-            e.classList.remove("active");
-        });
-        e.target.classList.add("active");
-
-    }
-
-    useEffect(() => {
-        // إعداد ScrollReveal للتأثيرات
-        Scroll()
-
-
-
-    }, []);
+        filter === 'all' || project.category === filter
+    )
 
     return (
-        <section className='project' name='projects'>
-            <div className=''>
+        <section className='projects-section' id='projects'>
+            <div className='container'>
                 <div className='main-heading'>
-                    <h1>My <span className='main-color'>Project</span></h1>
+                    <h1>My <span className='text-gradient'>Projects</span></h1>
                 </div>
 
-                {/* <div className='filter row justify-content-center'>
+                <div className='filter-container mb-5'>
+                    {categories.map(category => (
+                        <button
+                            key={category.id}
+                            className={`filter-btn ${filter === category.id ? 'active' : ''}`}
+                            onClick={() => setFilter(category.id)}
+                        >
+                            {category.label} {" "} ({category.id == "all" ? (ProjectData.length) :
+                                ProjectData.filter(project =>
+                                    project.category === category.id
+                                ).length
+                            })
+                        </button>
+                    ))}
+                </div>
 
-
-                    <div onClick={(e) => handleFilter(e, "all")} className="col-9 col-sm-5 col-md-auto  all active">All</div>
-
-
-
-
-                    <div onClick={(e) => handleFilter(e, "html")} className="col-9 col-sm-5 col-md-auto  HTML_CSS_JS">HTML CSS JS</div>
-
-
-
-
-                    <div onClick={(e) => handleFilter(e, "react")} className="col-9 col-sm-5 col-md-auto  React">React</div>
-
-
-
-
-                    <div onClick={(e) => handleFilter(e, "firebase")} className="col-9 col-sm-5 col-md-auto  firebase">React FireBase</div>
-
-
-                </div> */}
-                <div className=" row mt-5 pt-4 justify-content-center bottom">
-
-                    <AnimatePresence >
-                        {filteredProjects.map((item, index) => (
-                            <motion.div onClick={e => Navigate(`project/${item.id}`)}
-                                className="col-12 col-md-4 col-lg-3 mb-4 "
-                                key={item.name}
-                                initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-                                animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                                exit={{ opacity: 0, scale: 0.8, rotate: 10 }}
-                                transition={{ duration: 0.4, ease: "easeInOut" }}
-                            >
-                                <div className="box">
-                                    <img src={item.img} alt={item.name} />
-                                    <div className="demo">
-                                        <Link target='_blank' to={item.link}><FontAwesomeIcon icon={faLink} /></Link>
-                                        <h3 className="m-0 text-white">{item.name}</h3>
-                                        <button className='btn btn-success m-0'>Show More <FontAwesomeIcon className='m-0 ms-3 ' icon={faArrowRight}/></button>
+                <motion.div
+                    layout
+                    className="row g-4"
+                >
+                    <AnimatePresence mode='popLayout'>
+                        {
+                            filteredProjects.slice(0, showAll ? filteredProjects.length - 1 : 9).map((project) => (
+                                <motion.div
+                                    layout
+                                    key={project.id}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.9 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="col-12 col-md-6 col-lg-4"
+                                >
+                                    <div className="project-card" onClick={() => navigate(`/project/${project.id}`)}>
+                                        <div className="project-img-box">
+                                            <img src={project.img} alt={project.name} />
+                                            <div className="project-overlay">
+                                                <div className="overlay-content">
+                                                    <span className="view-details">View Details <FontAwesomeIcon icon={faArrowRight} /></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="project-info">
+                                            <div className="project-type-tag">{project.type.toUpperCase()}</div>
+                                            <h3 className="project-name">{project.name}</h3>
+                                            <p className="project-short-desc">{project.contact}</p>
+                                            <div className="project-tech-stack">
+                                                {project.technologies?.slice(0, 3).map((tech, i) => (
+                                                    <span key={i} className="tech-tag">{tech}</span>
+                                                ))}
+                                                {project.technologies?.length > 3 && <span className="tech-tag">+{project.technologies.length - 3}</span>}
+                                            </div>
+                                            <div className="project-actions mt-3">
+                                                <Link
+                                                    to={project.link}
+                                                    className="btn-link"
+                                                    target="_blank"
+                                                    onClick={(e) => e.stopPropagation()}
+                                                >
+                                                    Live Demo <FontAwesomeIcon icon={faExternalLinkAlt} />
+                                                </Link>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </motion.div>
-                        ))}
+                                </motion.div>
+                            ))
+
+
+
+                        }{
+
+                            !showAll && filteredProjects.length > 9 ? <button className='btn btn-primary w-fit mx-auto px-5 ' onClick={() => { setShowAll(true) }}>show All</button>
+                                : ""
+                        }
+
+
                     </AnimatePresence>
-                </div>
+                </motion.div>
             </div>
-        </section>
+        </section >
     )
 }
 
