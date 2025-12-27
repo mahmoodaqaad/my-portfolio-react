@@ -49,7 +49,30 @@ export const ProjectData = [
         ],
         responsive: true
     },
-
+    {
+        id: "blog",
+        img: require("../IMG/project/blog.png"),
+        name: "Blog Platform",
+        category: "fullstack",
+        type: "React",
+        technologies: ["React", "Firebase", "CSS", "Bootstrap"],
+        link: "https://my-blog-7f375.web.app",
+        github: "https://github.com/mahmoodaqaad/blogger",
+        featured: true,
+        contact: "A full-featured blogging platform with role-based access, admin dashboard, and interactive content management.",
+        fullDescription: "A complete blogging platform built with React and Firebase that supports multiple user roles (Admin, Writer, User). The system includes authentication, role-based permissions, article management, comments, search functionality, and a dedicated admin dashboard for managing users and content. The platform also features light and dark mode for enhanced user experience.",
+        features: [
+            "Role-based authentication (Admin, Writer, User)",
+            "Admin dashboard for managing users and articles",
+            "Create, edit, and delete articles (Writer & Admin)",
+            "Commenting system on articles",
+            "Search functionality for articles",
+            "Light & Dark mode support",
+            "Responsive and modern UI",
+            "Firebase authentication and database integration"
+        ],
+        responsive: true
+    },
     {
         id: "applight",
         img: require("../IMG/project/Applight.png"),
