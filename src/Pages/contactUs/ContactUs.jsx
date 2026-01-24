@@ -81,7 +81,7 @@ const ContactUs = () => {
                                         <Link target='_blank' to="https://wa.me/+970599923041" className='social-link'>
                                             <FontAwesomeIcon icon={faWhatsapp} />
                                         </Link>
-                                        <Link target='_blank' to="https://www.linkedin.com/in/%D9%85%D8%AD%D9%85%D9%88%D8%AF-%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%AF-528463291/" className='social-link'>
+                                        <Link target='_blank' to="https://www.linkedin.com/in/mahmood-aqaad-989b25334" className='social-link'>
                                             <FontAwesomeIcon icon={faLinkedinIn} />
                                         </Link>
                                         <Link target='_blank' to="https://github.com/mahmoodaqaad" className='social-link'>

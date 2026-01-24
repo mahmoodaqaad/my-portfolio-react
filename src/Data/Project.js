@@ -1,5 +1,43 @@
 export const ProjectData = [
     {
+        id: "hotel-booking",
+        img: require("../IMG/project/hotel.png"),
+        name: "Luxury Hotel",
+        category: "fullstack",
+        type: "react",
+        technologies: [
+            'React',
+            'Next.js',
+            'TypeScript',
+            'Tailwind CSS',
+            'Prisma',
+            'PostgreSQL',
+            'Supabase',
+            'Zod',
+            'Cloudinary'
+        ],
+        link: "https://hotel-mahmod.vercel.app/",
+        github: "https://github.com/mahmoodaqaad/Hotel",
+        featured: true,
+        contact: "A premium hotel booking platform with a modern UI, real-time booking flow, secure authentication, and an interactive dashboard experience.",
+        fullDescription: "Luxury Hotel is a full-featured hotel booking and management platform designed with a focus on performance, usability, and security. The system allows users to create accounts, browse and search available rooms, make real-time reservations, save favorite rooms, and leave verified reviews with star ratings. The platform includes a dynamic dashboard for managing profiles, bookings, and user interactions. Built using Next.js and TypeScript with Prisma and Supabase for data handling, Zod for strict form validation, and Cloudinary for optimized image delivery. The entire experience is fully responsive and optimized for desktop, tablet, and mobile devices.",
+        features: [
+            'Real-time Room Booking System',
+            'Instant Booking Status & Notifications',
+            'Advanced Search and Room Filtering',
+            'User Authentication and Protected Routes',
+            'User Profile & Booking Dashboard',
+            'Verified Reviews with Star Ratings',
+            'Favorites / Saved Rooms Functionality',
+            'Form Validation using Zod',
+            'Optimized Image Uploads with Cloudinary',
+            'Responsive Design for Desktop, Tablet, and Mobile',
+            'Modern UI with Smooth Animations',
+            'Performance-focused Architecture using Next.js'
+        ],
+        responsive: true
+    },
+    {
         id: "jivara-ecommerce",
         img: require("../IMG/project/e-commerce.png"),
         name: "Jivara E-commerce",

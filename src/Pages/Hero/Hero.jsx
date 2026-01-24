@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import './Hero.css'
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
@@ -12,7 +12,6 @@ const Hero = () => {
     const typedElement = useRef(null);
 
     useEffect(() => {
-        // Setup typing effect
         const typed = new Typed(typedElement.current, {
             strings: ['Front-End Developer', 'React Developer', 'Next.js Developer', 'FullStack Developer'],
             typeSpeed: 80,
@@ -27,7 +26,9 @@ const Hero = () => {
     }, []);
 
     const containerVariants = {
-        hidden: { opacity: 0 },
+        hidden: {
+            opacity: 0
+        },
         visible: {
             opacity: 1,
             transition: {
@@ -38,7 +39,10 @@ const Hero = () => {
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 30 },
+        hidden: {
+            opacity: 0,
+            y: 70
+        },
         visible: {
             opacity: 1,
             y: 0,
@@ -90,7 +94,7 @@ const Hero = () => {
                             <Link target='_blank' to="https://wa.me/+970599923041" className='social-icon'>
                                 <FontAwesomeIcon icon={faWhatsapp} />
                             </Link>
-                            <Link target='_blank' to="https://www.linkedin.com/in/%D9%85%D8%AD%D9%85%D9%88%D8%AF-%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%AF-528463291/" className='social-icon'>
+                            <Link target='_blank' to="https://www.linkedin.com/in/mahmood-aqaad-989b25334" className='social-icon'>
                                 <FontAwesomeIcon icon={faLinkedinIn} />
                             </Link>
                             <Link target='_blank' to="https://github.com/mahmoodaqaad" className='social-icon'>

@@ -3,13 +3,15 @@ import './Skills.css'
 import { motion } from 'framer-motion';
 import {
     FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaBootstrap,
-    FaGitAlt, FaFigma, FaNpm
+    FaGitAlt, FaNpm
 } from 'react-icons/fa';
 import {
     SiNextdotjs, SiTypescript, SiTailwindcss, SiFirebase,
-    SiMysql, SiExpress, SiRedux,
+    SiMysql, SiExpress,
     SiPrisma,
-    SiPostgresql
+    SiPostgresql,
+    SiRedux,
+    SiFramer
 } from 'react-icons/si';
 
 const Skills = () => {
@@ -38,7 +40,7 @@ const Skills = () => {
         'Frontend Frameworks': [
             { name: 'React', icon: <FaReact />, color: '#61DAFB' },
             { name: 'Next.js', icon: <SiNextdotjs />, color: '#ffffff' },
-            // { name: 'Redux', icon: <SiRedux />, color: '#764ABC' },
+            { name: 'Redux toolKit', icon: < SiRedux />, color: '#764ABC' },
         ],
         'Languages': [
             { name: 'HTML5', icon: <FaHtml5 />, color: '#E44D26' },
@@ -49,6 +51,7 @@ const Skills = () => {
         'Styling & UI': [
             { name: 'Bootstrap', icon: <FaBootstrap />, color: '#563D7C' },
             { name: 'Tailwind CSS', icon: <SiTailwindcss />, color: '#06B6D4' },
+            { name: 'Framer Motion', icon: <SiFramer />, color: '#000000' },
         ],
         'Backend & Database': [
             { name: 'Firebase', icon: <SiFirebase />, color: '#FFCB2B' },

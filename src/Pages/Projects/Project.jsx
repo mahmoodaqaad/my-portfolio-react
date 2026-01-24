@@ -35,7 +35,7 @@ const Project = () => {
                             className={`filter-btn ${filter === category.id ? 'active' : ''}`}
                             onClick={() => setFilter(category.id)}
                         >
-                            {category.label} {" "} ({category.id == "all" ? (ProjectData.length) :
+                            {category.label} {" "} ({category.id === "all" ? (ProjectData.length) :
                                 ProjectData.filter(project =>
                                     project.category === category.id
                                 ).length
@@ -71,7 +71,7 @@ const Project = () => {
                                         </div>
                                         <div className="project-info">
                                             <div className="project-type-tag">{project.type.toUpperCase()}</div>
-                                            <h3 className="project-name">{project.name}</h3>
+                                            <h3 className="project-name ">{project.name}</h3>
                                             <p className="project-short-desc">{project.contact}</p>
                                             <div className="project-tech-stack">
                                                 {project.technologies?.slice(0, 3).map((tech, i) => (
@@ -85,8 +85,7 @@ const Project = () => {
                                                     className="btn-link"
                                                     target="_blank"
                                                     onClick={(e) => e.stopPropagation()}
-                                                >
-                                                    Live Demo <FontAwesomeIcon icon={faExternalLinkAlt} />
+                                                >Live Demo<FontAwesomeIcon icon={faExternalLinkAlt} />
                                                 </Link>
                                             </div>
                                         </div>

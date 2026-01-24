@@ -30,7 +30,7 @@ const About = () => {
 
     const stats = [
         { number: '20+', label: 'Projects Completed' },
-        { number: '1+', label: 'Years Experience' },
+        { number: '2+', label: 'Years Experience' },
         { number: '100%', label: 'Client Satisfaction' }
     ];
 
@@ -51,7 +51,7 @@ const About = () => {
                         <div className='row align-items-center g-4'>
                             <motion.div variants={itemVariants} className="col-12 col-lg-4 text-center">
                                 <div className="about-image-wrapper">
-                                    <img src={require("../../IMG/aproto12-rmback-removebg.png")} alt="Mahmood Al-Aqad" />
+                                    <img src={require("../../IMG/aproto12-rmback-removebg.png")} alt="Mahmood Al-Aqaad" />
                                 </div>
                             </motion.div>
 
@@ -59,7 +59,7 @@ const About = () => {
                                 <div className="about-text">
                                     <h2 className='about-subtitle'>Passionate Front-End Developer</h2>
                                     <p>
-                                        Hello! I'm <strong>Mahmood Al-Aqad</strong>, a dedicated front-end developer with a passion for creating
+                                        Hello! I'm <strong>Mahmood Aqaad</strong>, a dedicated front-end developer with a passion for creating
                                         seamless and engaging web experiences. I specialize in building modern, responsive applications
                                         using cutting-edge technologies like <strong>React</strong>, <strong>Next.js</strong>, and <strong>TypeScript</strong>.
                                     </p>
