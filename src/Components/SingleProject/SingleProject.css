@@ -76,6 +76,7 @@
     background: rgba(255, 255, 255, 0.02);
     border-radius: var(--radius-md);
     transition: transform var(--transition-fast);
+    border: 1px solid var(--primary-light);
 }
 
 .feature-item:hover {

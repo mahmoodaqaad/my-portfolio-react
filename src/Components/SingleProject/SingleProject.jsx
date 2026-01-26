@@ -90,7 +90,7 @@ const SingleProject = () => {
                             <h2 className='h3 fw-bold mt-5 mb-4'>Key Features</h2>
                             <div className='features-list'>
                                 {project.features?.map((feature, index) => (
-                                    <div key={index} className='feature-item d-flex align-items-center gap-3 mb-3'>
+                                    <div key={index} className='feature-item d-flex align-items-center gap-3 mb-3 bi'>
                                         <FontAwesomeIcon icon={faCheckCircle} className='text-primary' />
                                         <span className='text-secondary fs-5'>{feature}</span>
                                     </div>
