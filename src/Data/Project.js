@@ -38,6 +38,42 @@ export const ProjectData = [
         responsive: true
     },
     {
+        id: "cvfix-ai",
+        img: require("../IMG/project/cvfix-ai.png"), // Make sure to add a screenshot here
+        name: "CVFix AI",
+        category: "fullstack",
+        type: "react",
+        technologies: [
+            'Next.js 16',
+            'React 19',
+            'TypeScript',
+            'Tailwind CSS v4',
+            'jsPDF',
+            'html2canvas',
+            'Framer Motion',
+            'Lucide React'
+        ],
+        link: "https://cvfix-ai.vercel.app/", // Replace with your actual deployment link
+        github: "https://github.com/mahmoodaqaad/CVFIX-AI",
+        featured: true,
+        contact: "A smart resume builder that transforms raw text into professional, multi-language CVs with intelligent PDF generation.",
+        fullDescription: "CVFix AI is an advanced resume building tool designed to streamline the job application process. It features a dual-mode input system: 'AI Import' for parsing raw text into structured data, and 'Manual Entry' for granular control. The platform supports full English and Arabic localization, including automatic RTL layout adjustments. A key technical achievement is the custom PDF generation engine that handles complex page breaking logic to ensure content is never cut off, providing a print-ready document every time.",
+        features: [
+            'Smart Text-to-CV Parsing',
+            'Dual Input Modes (AI & Manual)',
+            'Multi-language Support (English & Arabic)',
+            'Automatic RTL/LTR Layout Adjustment',
+            'Intelligent PDF Generation with Page Break Handling',
+            'Real-time Live Preview',
+            'Customizable Sections (Volunteering, Awards, etc.)',
+            'Dark/Light Theme Toggle',
+            'Responsive Mobile-First Design',
+            'Client-side Processing for Privacy',
+            'Modern UI with Tailwind CSS v4'
+        ],
+        responsive: true
+    },
+    {
         id: "jivara-ecommerce",
         img: require("../IMG/project/e-commerce.png"),
         name: "Jivara E-commerce",
