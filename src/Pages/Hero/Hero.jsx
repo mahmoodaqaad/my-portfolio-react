@@ -103,8 +103,8 @@ const Hero = () => {
                         </motion.div>
 
                         <motion.div variants={itemVariants} className='mt-4 d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap'>
-                            <Link target='_blank' to="https://drive.google.com/file/d/1mm9b3uDuRoCVKqJOsqzxie5b0n8XkriC/view?usp=sharing" className='btn btn-primary'>
-                                Download CV
+                            <Link target='_blank' to="https://drive.google.com/file/d/1_jUnQ1T3lG_sOxIkcMLJVdZSXMt5ND7J/view?usp=sharing" className='btn btn-primary'>
+                                Go to My CV
                             </Link>
                             <ScrollLink to="contact"
                                 spy={true}

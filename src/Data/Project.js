@@ -1,4 +1,5 @@
 export const ProjectData = [
+
     {
         id: "hotel-booking",
         img: require("../IMG/project/hotel.png"),
@@ -103,6 +104,97 @@ export const ProjectData = [
         features: ['Real-time messaging', 'Friend requests', 'Posts & comments', 'Active status indicator'],
         responsive: true
     },
+    {
+        id: "dali-dental",
+        img: require("../IMG/project/daley.png"),
+        name: "Dali Dental Clinic",
+        category: "react",
+        type: "React",
+        technologies: ["React", "Lucide React", "Framer Motion", "Tailwind CSS", "vibe coding"],
+        link: "https://daly-clinics.vercel.app/",
+        // github: "https://github.com/mahmoodaqaad/dali-dental",
+        featured: true,
+        contact: "A professional medical landing page for a dental clinic featuring emergency services and appointment booking.",
+        fullDescription: "Dali Dental is a high-end, responsive landing page designed for a dental clinic in Amman. It features a modern 'Glassmorphism' navigation, smooth scroll animations using Framer Motion, and a comprehensive services showcase. The project emphasizes UI/UX for medical services, including a 24/7 emergency CTA and a functional appointment request form.",
+        features: [
+            "Modern Glassmorphism Navigation Bar",
+            "Interactive Service Cards with Hover Effects",
+            "Emergency 24/7 Call-to-Action Section",
+            "Patient Reviews Slider/Grid with Rating Stars",
+            "Responsive Appointment Booking Form",
+            "Fully Mobile-Optimized Design"
+        ],
+        responsive: true
+    },
+    {
+        id: "barbra-restaurant",
+        img: require("../IMG/project/barbra.png"),
+        name: "Barbra Restaurant",
+        category: "html",
+        type: "html",
+        technologies: ["HTML5", "CSS3", "JavaScript", "i18n (Arabic/English)", "Responsive Design",  "vibe coding"],
+        link: "https://barbra-restaurant.netlify.app/",
+        // github: "https://github.com/mahmoodaqaad/barbra-restaurant",
+        featured: true,
+        contact: "A premium, fully responsive restaurant website with multi-language support (Arabic/English) and interactive menu filtering.",
+        fullDescription: "A high-end restaurant landing page built for 'Barbra Restaurant' in Beit Jala. The project focuses on luxury aesthetics and user experience, featuring a dynamic language switcher that adjusts both text and layout direction (RTL/LTR). It includes a categorized menu filtering system, integrated reservation forms, and a responsive gallery, all optimized for high performance and SEO.",
+        features: [
+            "Full Arabic & English support (RTL/LTR)",
+            "Premium and modern UI/UX design",
+            "Interactive menu filtering by category",
+            "Responsive reservation and contact forms",
+            "Smooth scrolling and hover animations",
+            "Optimized for mobile-first experience",
+            "Integrated Google Maps and social links",
+            "SEO-friendly semantic HTML structure"
+        ],
+        responsive: true
+    },
+    {
+        id: "petra-marketing",
+        img: require("../IMG/project/ptraa.png"),
+        name: "Petra Marketing",
+        category: "html",
+        type: "html",
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'Particles.js', 'Swiper.js', 'EmailJS', "vibe coding"],
+        link: "https://petramarketing.netlify.app/",
+        // github: "https://github.com/mahmoodaqaad/Petra",
+        featured: true,
+        contact: "Luxury Arabic Marketing Identity",
+        fullDescription: "موقع إلكتروني فاخر لشركة 'البتراء للحلول التسويقية' في عمان. يتميز بتصميم عصري (Ultra-Modern) يعتمد على تباين اللون الأسود الملكي مع التدرجات الذهبية. تم استلهام التصميم ليعكس الفخامة والقوة في الهوية التسويقية، مع دعم كامل للغة العربية (RTL) وتجربة مستخدم انسيابية.",
+        features: [
+            'Luxury Dark & Gold Aesthetic',
+            'Interactive Particles Background',
+            'Full RTL Arabic Support',
+            'EmailJS Integration (Real-time Contact)',
+            'Smooth Intersection Observer Animations',
+            'Fully Responsive Design (Mobile First)'
+        ],
+        responsive: true
+    },
+
+    {
+        id: "ultra-digital",
+        img: require("../IMG/project/ultra.png"),
+        name: "Ultra Digital",
+        category: "html",
+        type: "html",
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'Glassmorphism', "vibe coding"],
+        link: "https://ultra-digital.netlify.app/",
+        // github: "https://github.com/mahmoodaqaad/Ultra-Digital",
+        featured: true,
+        contact: "A futuristic marketing agency website with a premium neon-themed UI.",
+        fullDescription: "Ultra Digital is a cutting-edge landing page for a modern marketing agency. It features a striking neon-accented design, glassmorphism elements, and high-performance custom animations. The site includes a 3D interactive hero card, a services grid, a testimonial slider, and a sleek, information-dense layout optimized for performance.",
+        features: [
+            'Advanced futuristic neon design system',
+            'Interactive 3D hero card (Vanilla JS)',
+            'Smooth scroll reveal animations for components',
+            'Dynamic background glow and interactive effects',
+            'Fully responsive and mobile-optimized experience'
+        ],
+        responsive: true
+    },
+
     {
         id: "cryptocoin",
         img: require("../IMG/project/CryptoCoin-1.0.0.png"),
