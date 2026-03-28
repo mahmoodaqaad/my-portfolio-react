@@ -1,29 +1,65 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import './Contact.css'
 import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faMapMarkerAlt, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
-import { faLinkedin, faGithub, faInstagram, faFacebookF, faWhatsapp, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope, faMapMarkerAlt, faPaperPlane, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faInstagram, faFacebookF, faWhatsapp, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
+import emailjs from '@emailjs/browser'
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        phone: '',
+        subject: '',
         message: ''
     })
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        // Handle form submission logic here
-        console.log('Form submitted:', formData)
-    }
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [submitStatus, setSubmitStatus] = useState(null)
+    const formRef = useRef();
 
     const handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
         })
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        setIsSubmitting(true)
+        setSubmitStatus(null)
+
+        const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID
+        const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID
+        const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+
+        try {
+            await emailjs.send(
+                serviceId,
+                templateId,
+                {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    phone: formData.phone,
+                    subject: formData.subject,
+                    message: formData.message,
+                    reply_to: formData.email,
+                },
+                publicKey
+            )
+            setSubmitStatus('success')
+            setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+            if (formRef.current) formRef.current.reset()
+            setTimeout(() => setSubmitStatus(null), 5000)
+        } catch (error) {
+            console.error('EmailJS Error:', error)
+            setSubmitStatus('error')
+            setTimeout(() => setSubmitStatus(null), 5000)
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     return (
@@ -60,10 +96,20 @@ const ContactUs = () => {
 
                                     <div className='info-item d-flex align-items-center gap-4 mb-4'>
                                         <div className='info-icon'>
+                                            <FontAwesomeIcon icon={faPhone} />
+                                        </div>
+                                        <div>
+                                            <h4 className='h6 m-0 text-secondary'>Phone</h4>
+                                            <p className='m-0 fw-bold'>+970 599 923 041</p>
+                                        </div>
+                                    </div>
+
+                                    <div className='info-item d-flex align-items-center gap-4 mb-4'>
+                                        <div className='info-icon'>
                                             <FontAwesomeIcon icon={faMapMarkerAlt} />
                                         </div>
                                         <div>
-                                            <h4 className='h6 m-0 text-secondary'>Location</h4>
+                                            <h4 className='h6 m-0 text-secondary'>Location / Address</h4>
                                             <p className='m-0 fw-bold'>Gaza, Palestine</p>
                                         </div>
                                     </div>
@@ -98,7 +144,7 @@ const ContactUs = () => {
                             viewport={{ once: true }}
                             className='col-lg-7'
                         >
-                            <form className='contact-form card p-4 shadow-sm' onSubmit={handleSubmit}>
+                            <form className='contact-form card p-4 shadow-sm' onSubmit={handleSubmit} ref={formRef}>
                                 <div className='row g-3'>
                                     <div className='col-md-6'>
                                         <div className='form-group'>
@@ -110,6 +156,7 @@ const ContactUs = () => {
                                                 placeholder='John Doe'
                                                 required
                                                 onChange={handleChange}
+                                                value={formData.name}
                                             />
                                         </div>
                                     </div>
@@ -123,6 +170,35 @@ const ContactUs = () => {
                                                 placeholder='john@example.com'
                                                 required
                                                 onChange={handleChange}
+                                                value={formData.email}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className='col-md-6'>
+                                        <div className='form-group'>
+                                            <label className='form-label'>Phone Number</label>
+                                            <input
+                                                type='tel'
+                                                name='phone'
+                                                className='form-control'
+                                                placeholder='+1 234 567 890'
+                                                onChange={handleChange}
+                                                value={formData.phone}
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className='col-md-6'>
+                                        <div className='form-group'>
+                                            <label className='form-label'>Subject</label>
+                                            <input
+                                                type='text'
+                                                name='subject'
+                                                className='form-control'
+                                                placeholder='Project Discussion'
+                                                required
+                                                onChange={handleChange}
+                                                value={formData.subject}
                                             />
                                         </div>
                                     </div>
@@ -136,12 +212,31 @@ const ContactUs = () => {
                                                 placeholder='Tell me about your project...'
                                                 required
                                                 onChange={handleChange}
+                                                value={formData.message}
                                             ></textarea>
                                         </div>
                                     </div>
                                     <div className='col-12 mt-4'>
-                                        <button type='submit' className='btn btn-primary w-100'>
-                                            Send Message <FontAwesomeIcon icon={faPaperPlane} className='ms-2' />
+                                        {submitStatus === 'success' && (
+                                            <div className="alert alert-success border-0 shadow-sm mb-3">
+                                                Message sent successfully! I will get back to you soon.
+                                            </div>
+                                        )}
+                                        {submitStatus === 'error' && (
+                                            <div className="alert alert-danger border-0 shadow-sm mb-3">
+                                                Oops! Something went wrong. Please try again later.
+                                            </div>
+                                        )}
+                                        <button
+                                            type='submit'
+                                            className='btn btn-primary w-100'
+                                            disabled={isSubmitting}
+                                        >
+                                            {isSubmitting ? (
+                                                <>Sending... <span className="spinner-border spinner-border-sm ms-2"></span></>
+                                            ) : (
+                                                <>Send Message <FontAwesomeIcon icon={faPaperPlane} className='ms-2' /></>
+                                            )}
                                         </button>
                                     </div>
                                 </div>
