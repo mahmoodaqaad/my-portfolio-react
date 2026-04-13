@@ -65,7 +65,9 @@ const SingleProject = () => {
                                     <Link to={project.link} target='_blank' className='btn btn-primary px-4'>
                                         Live Demo <FontAwesomeIcon icon={faExternalLinkAlt} className='ms-2' />
                                     </Link>
-                                    <Link to={project.github || '#'} target='_blank' className='btn btn-outline px-4'>
+                                    <Link to={
+                                        // project.github ||
+                                        '#'} target='_blank' className='btn btn-outline px-4'>
                                         Source Code <FontAwesomeIcon icon={faGithub} className='ms-2' />
                                     </Link>
                                 </div>

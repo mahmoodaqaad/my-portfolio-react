@@ -127,17 +127,134 @@ export const ProjectData = [
         responsive: true
     },
     {
-        id: "barbra-restaurant",
-        img: require("../IMG/project/barbra.png"),
-        name: "Barbra Restaurant",
+        id: "timber-company",
+        img: require("../IMG/project/timber-hero.png"), // Make sure to add the image and adjust the path
+        name: "Timber Crafts",
         category: "html",
         type: "html",
-        technologies: ["HTML5", "CSS3", "JavaScript", "i18n (Arabic/English)", "Responsive Design",  "vibe coding"],
-        link: "https://barbra-restaurant.netlify.app/",
+        technologies: [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Responsive Design",
+            // "vibe coding"
+        ],
+        link: "https://timber-company.netlify.app", // Add your live link here
+        github: "#", // Add your GitHub link here
+        featured: true,
+        contact: "A professional and premium landing page for a luxury woodwork and interior design company.",
+        fullDescription: "A comprehensive website template designed for 'Timber Crafts', a company specializing in luxury woodwork and interior design. The project features an elegant layout with full Arabic (RTL) support, focusing on highlighting the aesthetic of their projects and delivering a smooth user experience that reflects luxury and high-end craftsmanship.",
+        features: [
+            "Full Arabic (RTL) Support",
+            "Elegant and Premium UI/UX Design",
+            "Advanced Scroll Reveal Animations",
+            "Interactive Project Gallery",
+            "100% Fully Responsive and Mobile-Optimized",
+            "Clean and Maintainable Code Structure"
+        ],
+        responsive: true
+    },
+    {
+        id: "beauty-code",
+        img: require("../IMG/project/beauty-code.png"),
+        name: "Beauty Code Clinic",
+        category: "html",
+        type: "html",
+        technologies: [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Responsive Design",
+            // "vibe coding"
+        ],
+        link: "https://beauty-code-clinic.netlify.app/", // Replace with the actual deployment link if different
+        github: "#", // Add your GitHub link here or leave as "#"
+        featured: true,
+        contact: "A premium, fully responsive Arabic website for Beauty Code Clinic in Riyadh, offering comprehensive medical and cosmetic services.",
+        fullDescription: "A premium landing page for 'Beauty Code Clinics' in Riyadh. The website is seamlessly designed to reflect luxury in providing high-end medical services, including Dental, Dermatology, Laser, and Nutrition. It features a modern aesthetic with full Arabic language support (RTL layout). The project includes an interactive appointment booking form, a showcase of real patient reviews with star ratings, detailed clinic branches, and a fully responsive browsing experience optimized for all devices.",
+        features: [
+            "Premium UI/UX Design with Gold and Dark themes",
+            "Full Arabic Support (RTL Layout)",
+            "Interactive Medical Services Showcase",
+            "Responsive Appointment Booking Form",
+            "Patient Reviews Grid with Star Ratings",
+            "Mobile-First Responsive Architecture",
+            "Smooth Scrolling and Hover Animations"
+        ],
+        responsive: true
+    },
+    {
+        id: "euforia-clinic",
+        img: require("../IMG/project/euforia.png"), // تأكد من المسار واسم الصورة
+        name: "Euforia Clinic",
+        category: "html",
+        type: "html",
+        technologies: [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Responsive Design",
+            // "vibe coding"
+        ],
+        link: "https://ephoria-clinic.netlify.app/", // ضع رابط الموقع المباشر هنا
+        github: "#", // ضع رابط المستودع إذا كان متاحاً أو اتركه
+        featured: true,
+        contact: "A modern, elegant, and fully responsive Arabic website for Euforia Clinic in Riyadh, focused on human-centered medical and cosmetic services.",
+        fullDescription: "A professional landing page for 'عيادات ايفوريا – Euforia Clinic' in Riyadh. The project features a clean, semantic design focusing on an elegant, human-centered digital presence. It delivers advanced skincare, laser, and hair treatments conceptually. The website includes a comprehensive homepage, dedicated services page, user reviews, integrated gallery, and a fully functional contact page. It is built with complete Arabic language support (RTL layout) ensuring a seamless and premium user experience across all devices.",
+        features: [
+            "Elegant and Professional UI/UX Design",
+            "Full Arabic Support (RTL Layout)",
+            "Interactive Medical Services and Gallery Pages",
+            "Patient Statistics and Reviews Integration",
+            "100% Fully Responsive and Mobile-Optimized Architecture",
+            "Clean, Semantic HTML and Modern CSS Structure"
+        ],
+        responsive: true
+    },
+    {
+        id: "brand-up",
+        img: require("../IMG/project/brand-up.png"), // الرجاء تعديل اسم الصورة لتتطابق مع ملفاتك
+        name: "Brand Up",
+        category: "html",
+        type: "html",
+        technologies: [
+            'HTML5',
+            'CSS3',
+            'JavaScript',
+            'Particles.js',
+            'Swiper.js',
+            'EmailJS',
+        ],
+        link: "https://brandup-marketing.netlify.app", // ضع رابط الموقع الفعلي هنا
+        github: "#  ", // قم بإلغاء التعليق إذا توفر رابط الجيت هاب
+        featured: true,
+        contact: "A premium, fully responsive digital marketing agency website (RTL) featuring dynamic services and advanced animations.",
+        fullDescription: "Brand Up is a high-end digital identity for a sophisticated marketing agency based in Zagazig, Egypt. Rebranded with a striking aesthetic, the platform is designed to establish authority and trust in the digital market. It showcases comprehensive marketing services—from visual identity design to social media management and video montage. The website features an interactive particles hero section, a seamless Swiper.js testimonials carousel displaying top-tier client reviews, and direct communication channels via WhatsApp and EmailJS. The entire interface is fully optimized for RTL Arabic with smooth scroll-reveal animations across all devices.",
+        features: [
+            'Premium & Modern Visual Identity Theme',
+            'Interactive Particles Hero Background',
+            'Full Arabic Support (RTL Layout)',
+            'Dynamic Client Testimonials Carousel (Swiper.js)',
+            'Real-time Contact Form with EmailJS',
+            'Direct WhatsApp & Click-to-Call Integration',
+            'Smooth Intersection Observer Animations',
+            'Fully Responsive Mobile-First Design'
+        ],
+        responsive: true
+    },
+
+    {
+        id: "BellaVista-restaurant",
+        img: require("../IMG/project/bella.png"),
+        name: "BellaVista Restaurant",
+        category: "html",
+        type: "html",
+        technologies: ["HTML5", "CSS3", "JavaScript", "i18n (Arabic/English)", "Responsive Design", "vibe coding"],
+        link: "https://bellavista-res.netlify.app/",
         // github: "https://github.com/mahmoodaqaad/barbra-restaurant",
         featured: true,
         contact: "A premium, fully responsive restaurant website with multi-language support (Arabic/English) and interactive menu filtering.",
-        fullDescription: "A high-end restaurant landing page built for 'Barbra Restaurant' in Beit Jala. The project focuses on luxury aesthetics and user experience, featuring a dynamic language switcher that adjusts both text and layout direction (RTL/LTR). It includes a categorized menu filtering system, integrated reservation forms, and a responsive gallery, all optimized for high performance and SEO.",
+        fullDescription: "A high-end restaurant landing page built for 'BellaVista Restaurant' in Beit Jala. The project focuses on luxury aesthetics and user experience, featuring a dynamic language switcher that adjusts both text and layout direction (RTL/LTR). It includes a categorized menu filtering system, integrated reservation forms, and a responsive gallery, all optimized for high performance and SEO.",
         features: [
             "Full Arabic & English support (RTL/LTR)",
             "Premium and modern UI/UX design",
