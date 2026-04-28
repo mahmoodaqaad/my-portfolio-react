@@ -1,6 +1,5 @@
 export const ProjectData = [
-
-    {
+       {
         id: "hotel-booking",
         img: require("../IMG/project/hotel.png"),
         name: "Luxury Hotel",
@@ -38,6 +37,50 @@ export const ProjectData = [
         ],
         responsive: true
     },
+    {
+        id: "omni-booking-saas",
+        img: require("../IMG/project/omnibooking.png"),
+        name: "Omni Booking",
+        category: "fullstack",
+        type: "react",
+        technologies: [
+            'Next.js 16',
+            'React 19',
+            'TypeScript',
+            'Prisma',
+            'PostgreSQL',
+            'SupaBase',
+            'Tailwind CSS v4',
+            'Context API',
+            'Next-Auth (Google & Credentials)',
+            'Next-Intl (i18n)',
+            'Cloudinary',
+            'Nodemailer'
+        ],
+        link: "https://omni-booking.vercel.app",
+        github: "https://github.com/mahmoodaqaad/Omni-Booking",
+        featured: true,
+        contact: "A complete Multi-tenant SaaS ecosystem with triple-layered dashboards, subscription management, and Google OAuth integration.",
+        fullDescription: "OmniBooking is a robust SaaS ecosystem designed to revolutionize how businesses manage their appointments. It features a sophisticated Multi-tenant architecture with three specialized dashboards: a Super Admin panel for platform oversight, a Business Owner dashboard for full control over services and revenue, and a Staff panel for schedule management. The system supports seamless English/Arabic localization, secure Google OAuth registration, and a multi-step onboarding process for new businesses. With integrated subscription plans, email verification, and a dynamic 'Explore' page for business discovery, it offers a complete commercial-grade solution for various industries.",
+        features: [
+            'Multi-tenant Architecture with Subdomain/Slug isolation',
+            'Triple Dashboard System: Super Admin, Business Owner, and Staff',
+            'Google OAuth & Credentials Authentication',
+            'English & Arabic Localization (Full RTL Support)',
+            'Advanced Onboarding Flow for Business Setup',
+            'Subscription Tiers & Plan Management',
+            'Email Verification & Secure Password Reset',
+            'Dynamic Explore Page for Business Discovery',
+            'Advanced Search & Filtering for Services/Businesses',
+            'Real-time Booking Management & Calendar View',
+            'Cloudinary Integration for Business Branding',
+            'Comprehensive Revenue & Analytics Charts',
+            'Mobile-First Responsive UI with Tailwind CSS v4',
+            'State Management using React context'
+        ],
+        responsive: true
+    },
+
     {
         id: "cvfix-ai",
         img: require("../IMG/project/cvfix-ai.png"), // Make sure to add a screenshot here

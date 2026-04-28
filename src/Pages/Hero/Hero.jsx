@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGithub, faInstagram, faLinkedinIn, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import Typed from 'typed.js';
-
+const LINK_CV ="https://drive.google.com/file/d/1y-tEt1HLXLb50HgbeW172bQSrBbRk5ax/view?usp=sharing"
 const Hero = () => {
     const typedElement = useRef(null);
 
@@ -103,7 +103,7 @@ const Hero = () => {
                         </motion.div>
 
                         <motion.div variants={itemVariants} className='mt-4 d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap'>
-                            <Link target='_blank' to="https://drive.google.com/file/d/1_jUnQ1T3lG_sOxIkcMLJVdZSXMt5ND7J/view?usp=sharing" className='btn btn-primary'>
+                            <Link target='_blank' to={LINK_CV} className='btn btn-primary'>
                                 Go to My CV
                             </Link>
                             <ScrollLink to="contact"

@@ -11,7 +11,8 @@ import {
     SiPrisma,
     SiPostgresql,
     SiRedux,
-    SiFramer
+    SiFramer,
+    SiSupabase
 } from 'react-icons/si';
 
 const Skills = () => {
@@ -54,7 +55,8 @@ const Skills = () => {
             { name: 'Framer Motion', icon: <SiFramer />, color: '#000000' },
         ],
         'Backend & Database': [
-            { name: 'Firebase', icon: <SiFirebase />, color: '#FFCB2B' },
+            { name: 'Firebase', icon: <SiFirebase />, color: ' #ff8928ff ' },
+            { name: 'Supabase', icon: <SiSupabase />, color: '#3ECF8E' },
             { name: 'Express.js', icon: <SiExpress />, color: '#ffffff' },
             { name: 'PostgreSQL', icon: <SiPostgresql />, color: '#0061FF' },
             { name: 'MySQL', icon: <SiMysql />, color: '#4479A1' },
