@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGithub, faInstagram, faLinkedinIn, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import Typed from 'typed.js';
-const LINK_CV ="https://drive.google.com/file/d/1y-tEt1HLXLb50HgbeW172bQSrBbRk5ax/view?usp=sharing"
+const LINK_CV = "https://drive.google.com/file/d/1y-tEt1HLXLb50HgbeW172bQSrBbRk5ax/view?usp=sharing"
 const Hero = () => {
     const typedElement = useRef(null);
 
@@ -121,7 +121,7 @@ const Hero = () => {
                         variants={itemVariants}
                     >
                         <div className='profile-image-wrapper'>
-                            <img src={require("../../IMG/PEC-2.png")} alt="Mahmood Al-Aqaad" />
+                            <img src={require("../../IMG/hero-clean.png")} alt="Mahmood Al-Aqaad" />
                             <div className='image-backdrop'></div>
                         </div>
                     </motion.div>
