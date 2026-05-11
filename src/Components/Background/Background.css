@@ -13,10 +13,13 @@
 .blob {
     position: absolute;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.15;
+    filter: blur(60px);
+    opacity: 0.12;
     animation: move 20s infinite alternate;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
 }
+
 
 .blob-1 {
     width: 500px;
@@ -67,12 +70,13 @@
 
 @keyframes move {
     from {
-        transform: translate(0, 0) scale(1);
+        transform: translate3d(0, 0, 0) scale(1);
     }
     to {
-        transform: translate(100px, 100px) scale(1.1);
+        transform: translate3d(100px, 100px, 0) scale(1.1);
     }
 }
+
 
 [data-theme="light"] .blob {
     opacity: 0.1;

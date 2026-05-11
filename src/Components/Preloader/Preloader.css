@@ -47,11 +47,23 @@
     justify-content: center;
     gap: 10px;
 }
-
 .loading-word {
+    
     font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.4);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 600;
+    
+
+}
+
+.loading-word .item{
+    
+    display: flex;
+    gap: 7px;
+}
+@media (max-width: 768px) {
+    .loading-word .item{
+display: none;    }
 }

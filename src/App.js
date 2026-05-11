@@ -3,19 +3,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+// Synchronous import for the preloader to fix FCP
+import Preloader from './Components/Preloader/Preloader';
+
+// Lazy load everything else
 const Main = lazy(() => import('./Pages/Main/Main'));
 const SingleProject = lazy(() => import('./Components/SingleProject/SingleProject'));
 const Header = lazy(() => import('./Components/Header/Header'));
 const Footer = lazy(() => import('./Components/Footer/Footer'));
 const Background = lazy(() => import('./Components/Background/Background'));
 const CursorFollower = lazy(() => import('./Components/CursorFollower/CursorFollower'));
-const Preloader = lazy(() => import('./Components/Preloader/Preloader'));
 
 function App() {
   return (
     <div className="App">
+      <Preloader />
+
       <Suspense fallback={null}>
-        <Preloader />
         <Background />
         <CursorFollower />
       </Suspense>
@@ -24,7 +28,7 @@ function App() {
         <Suspense fallback={null}>
           <Header />
         </Suspense>
-        
+
         <Routes>
           <Route path='/' element={
             <Suspense fallback={null}>
@@ -45,6 +49,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
