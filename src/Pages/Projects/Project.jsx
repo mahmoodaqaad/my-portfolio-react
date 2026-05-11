@@ -59,8 +59,15 @@ const Project = () => {
                                     exit={{ opacity: 0, scale: 0.9 }}
                                     transition={{ duration: 0.3 }}
                                     className="col-12 col-md-6 col-lg-4"
+                                    whileHover={{ 
+                                        y: -10,
+                                        rotateX: 4,
+                                        rotateY: -4,
+                                        transition: { duration: 0.4 }
+                                    }}
                                 >
                                     <div className="project-card" onClick={() => navigate(`/project/${project.id}`)}>
+
                                         <div className="project-img-box">
                                             <img src={project.img} alt={project.name} />
                                             <div className="project-overlay">
@@ -109,4 +116,5 @@ const Project = () => {
     )
 }
 
-export default Project
+export default React.memo(Project)
+

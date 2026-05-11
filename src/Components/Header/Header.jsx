@@ -26,9 +26,12 @@ const Header = () => {
   const navLinks = [
     { name: 'Home', to: 'home', offset: -100 },
     { name: 'About', to: 'about', offset: -50 },
-    { name: 'Skills', to: 'skills', offset: -50 },
     { name: 'Projects', to: 'projects', offset: -50 },
+    { name: 'Skills', to: 'skills', offset: -50 },
+    { name: 'Services', to: 'services', offset: -50 },
+    { name: 'Experience', to: 'stats', offset: -50 },
     { name: 'Contact', to: 'contact', offset: -50 }
+
   ];
 
   return (

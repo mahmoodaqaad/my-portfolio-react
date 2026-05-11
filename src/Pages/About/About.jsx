@@ -29,7 +29,7 @@ const About = () => {
     };
 
     const stats = [
-        { number: '20+', label: 'Projects Completed' },
+        { number: '30+', label: 'Projects Completed' },
         { number: '2+', label: 'Years Experience' },
         { number: '100%', label: 'Client Satisfaction' }
     ];
@@ -51,8 +51,9 @@ const About = () => {
                         <div className='row align-items-center g-4'>
                             <motion.div variants={itemVariants} className="col-12 col-lg-4 text-center">
                                 <div className="about-image-wrapper">
-                                    <img src={require("../../IMG/hero-clean.png")} alt="Mahmood Al-Aqaad" />
+                                    <img src={require("../../IMG/hero-clean.png")} alt="Mahmood Al-Aqaad" loading="lazy" />
                                 </div>
+
                             </motion.div>
 
                             <motion.div variants={itemVariants} className="col-12 col-lg-8">

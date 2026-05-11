@@ -7,9 +7,48 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGithub, faInstagram, faLinkedinIn, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 import Typed from 'typed.js';
+
 const LINK_CV = "https://drive.google.com/file/d/1y-tEt1HLXLb50HgbeW172bQSrBbRk5ax/view?usp=sharing"
+
 const Hero = () => {
     const typedElement = useRef(null);
+    const imageRef = useRef(null);
+    const heroSectionRef = useRef(null);
+
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            if (!imageRef.current || !heroSectionRef.current) return;
+            
+            const rect = heroSectionRef.current.getBoundingClientRect();
+            const { clientX, clientY } = e;
+            
+            // Calculate relative position within the hero section
+            const x = (clientX - (rect.left + rect.width / 2)) / 15;
+            const y = (clientY - (rect.top + rect.height / 2)) / 15;
+            
+            imageRef.current.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
+        };
+
+        const handleMouseLeave = () => {
+            if (!imageRef.current) return;
+            // Reset to fixed position
+            imageRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        };
+
+        const section = heroSectionRef.current;
+        if (section) {
+            section.addEventListener('mousemove', handleMouseMove);
+            section.addEventListener('mouseleave', handleMouseLeave);
+        }
+
+        return () => {
+            if (section) {
+                section.removeEventListener('mousemove', handleMouseMove);
+                section.removeEventListener('mouseleave', handleMouseLeave);
+            }
+        };
+    }, []);
+
 
     useEffect(() => {
         const typed = new Typed(typedElement.current, {
@@ -26,9 +65,7 @@ const Hero = () => {
     }, []);
 
     const containerVariants = {
-        hidden: {
-            opacity: 0
-        },
+        hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
@@ -39,10 +76,7 @@ const Hero = () => {
     };
 
     const itemVariants = {
-        hidden: {
-            opacity: 0,
-            y: 70
-        },
+        hidden: { opacity: 0, y: 70 },
         visible: {
             opacity: 1,
             y: 0,
@@ -54,7 +88,8 @@ const Hero = () => {
     };
 
     return (
-        <section className='hero-section' id='home'>
+        <section ref={heroSectionRef} className='hero-section' id='home'>
+
             <div className='hero-gradient'></div>
             <div className='container'>
                 <motion.div
@@ -119,16 +154,28 @@ const Hero = () => {
                     <motion.div
                         className='right img-box col-12 col-lg-6 mt-5 mt-lg-0'
                         variants={itemVariants}
+                        style={{ perspective: "1000px" }}
                     >
-                        <div className='profile-image-wrapper'>
-                            <img src={require("../../IMG/hero-clean.png")} alt="Mahmood Al-Aqaad" />
-                            <div className='image-backdrop'></div>
+                        <div className="float-container">
+                            <div 
+                                ref={imageRef}
+                                className='profile-image-wrapper'
+                                style={{ transition: "transform 0.1s ease-out", transformStyle: "preserve-3d" }}
+                            >
+                                <img 
+                                    src={require("../../IMG/hero-clean.png")} 
+                                    alt="Mahmood Al-Aqaad" 
+                                    loading="eager"
+                                    fetchpriority="high"
+                                />
+                                <div className='image-backdrop'></div>
+                            </div>
                         </div>
                     </motion.div>
                 </motion.div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Hero
+export default Hero;
