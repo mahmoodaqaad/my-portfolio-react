@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { memo, useEffect, useRef } from 'react'
 import './Hero.css'
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
@@ -70,7 +70,7 @@ const Hero = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.2,
-                delayChildren: 0.3
+                delayChildren: 2.3
             }
         }
     };
@@ -178,4 +178,5 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default memo(Hero);
+

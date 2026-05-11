@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, memo } from 'react'
 import './about.css'
 import { motion } from 'framer-motion';
 
@@ -93,4 +93,5 @@ const About = () => {
     )
 }
 
-export default About
+export default memo(About)
+    

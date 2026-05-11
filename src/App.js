@@ -1,28 +1,46 @@
+import React, { lazy, Suspense } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Header from './Components/Header/Header';
-import Main from './Pages/Main/Main';
-import Footer from './Components/Footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import SingleProject from './Components/SingleProject/SingleProject';
 
-
-import Background from './Components/Background/Background';
-import CursorFollower from './Components/CursorFollower/CursorFollower';
+const Main = lazy(() => import('./Pages/Main/Main'));
+const SingleProject = lazy(() => import('./Components/SingleProject/SingleProject'));
+const Header = lazy(() => import('./Components/Header/Header'));
+const Footer = lazy(() => import('./Components/Footer/Footer'));
+const Background = lazy(() => import('./Components/Background/Background'));
+const CursorFollower = lazy(() => import('./Components/CursorFollower/CursorFollower'));
+const Preloader = lazy(() => import('./Components/Preloader/Preloader'));
 
 function App() {
   return (
     <div className="App">
-      <Background />
-      <CursorFollower />
+      <Suspense fallback={null}>
+        <Preloader />
+        <Background />
+        <CursorFollower />
+      </Suspense>
 
       <BrowserRouter>
-        <Header />
+        <Suspense fallback={null}>
+          <Header />
+        </Suspense>
+        
         <Routes>
-          <Route path='/' element={<Main />} />
-          <Route path='/project/:id' element={<SingleProject />} />
+          <Route path='/' element={
+            <Suspense fallback={null}>
+              <Main />
+            </Suspense>
+          } />
+          <Route path='/project/:id' element={
+            <Suspense fallback={null}>
+              <SingleProject />
+            </Suspense>
+          } />
         </Routes>
-        <Footer />
+
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
       </BrowserRouter>
     </div>
   );

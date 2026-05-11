@@ -80,14 +80,24 @@
   --shadow-glow: 0 0 30px rgba(79, 70, 229, 0.1);
 }
 
-body {
+html, body {
   font-family: 'Inter', sans-serif;
   background-color: var(--background);
   color: var(--text-primary);
   transition: background-color var(--transition-base), color var(--transition-base);
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  width: 100%;
+  position: relative;
   line-height: 1.6;
 }
+
+#root, .App, section {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+
 
 h1,
 h2,
